@@ -1,0 +1,23 @@
+{
+  "total_claims": 450,
+  "label_counts": {
+    "NOT ENOUGH INFO": 150,
+    "REFUTES": 150,
+    "SUPPORTS": 150
+  },
+  "corpus_size": 4571,
+  "gold_count": 2071,
+  "distractor_count": 2500,
+  "type_breakdown_gold": {
+    "sentence": 703,
+    "cell": 1394
+  },
+  "gold_per_claim": {
+    "mean": 4.66,
+    "median": 3.0,
+    "max": 50,
+    "min": 0
+  },
+  "claims_without_resolved_evidence": 2,
+  "unresolved_evidence_ids": 138
+}

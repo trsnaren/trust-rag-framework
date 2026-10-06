@@ -1,0 +1,65 @@
+{
+  "dataset": {
+    "source": "fever/feverous",
+    "version": "datasets==2.15.0",
+    "license": "CC BY-SA 3.0",
+    "claims_total": 450,
+    "claims_per_label": 150,
+    "corpus_size": 4571,
+    "gold_count": 2071,
+    "distractor_count": 2500,
+    "unresolved_ids": 138,
+    "claims_without_evidence": 2
+  },
+  "retrieval": {
+    "model": "all-MiniLM-L6-v2",
+    "index": "FAISS IndexFlatIP (cosine, L2-normalized)",
+    "metrics": {
+      "P@5": 0.35333,
+      "P@10": 0.20667,
+      "P@20": 0.11622,
+      "R@5": 0.59355,
+      "R@10": 0.64857,
+      "R@20": 0.69418
+    }
+  },
+  "label_accuracy": {
+    "b1_llm_only": 0.3889,
+    "b2_standard_rag": 0.4378,
+    "proposed_ers": 0.46,
+    "abl_noscoring": 0.4378,
+    "abl_noverif": 0.46
+  },
+  "hallucination": {
+    "threshold_tau_g": 0.5,
+    "nli_model": "facebook/bart-large-mnli",
+    "b1_halluc_rate": 0.8222,
+    "b2_halluc_rate": 0.8378,
+    "proposed_halluc": 0.8533
+  },
+  "grounding_score": {
+    "b1": 0.2807,
+    "b2": 0.2786,
+    "proposed": 0.2766
+  },
+  "calibration": {
+    "confidence_definition": "mean max-entailment score across justification sentences",
+    "n_bins": 10,
+    "b2_ece": 0.25119,
+    "proposed_ece": 0.28808
+  },
+  "ers_weights": {
+    "w_relevance": 0.7,
+    "w_consistency": 0.3
+  },
+  "environment": {
+    "platform": "Google Colab free tier",
+    "gpu": "T4",
+    "datasets_version": "2.15.0",
+    "huggingface_hub_version": "0.19.4",
+    "fsspec_version": "2023.10.0",
+    "generation_model": "mistralai/Mistral-7B-Instruct-v0.3 (4-bit, nf4)",
+    "nli_model": "facebook/bart-large-mnli",
+    "embedding_model": "all-MiniLM-L6-v2"
+  }
+}

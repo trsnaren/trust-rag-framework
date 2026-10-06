@@ -1,0 +1,23 @@
+# Environment & Secrets
+.env
+*.key
+*.pem
+
+# Python & Jupyter
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Model Checkpoints & Weights
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.h5
+*.onnx
+
+# OS & Temp
+.DS_Store
+Thumbs.db
+tmp/
